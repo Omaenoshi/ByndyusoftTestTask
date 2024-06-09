@@ -4,6 +4,11 @@
     {
         public static int SumTwoMinsInArray(int[] array)
         {
+            if(array == null || array.Length < 2) 
+            {
+                throw new ArgumentException("Array must exists and contains less than 2 numbers");
+            }
+
             int min1 = int.MaxValue;
             int min2 = int.MaxValue;
 
