@@ -6,7 +6,7 @@
         {
             if(array == null || array.Length < 2) 
             {
-                throw new ArgumentException("Array must exists and contains less than 2 numbers");
+                throw new ArgumentException("Array must exists and contains 2 and more numbers");
             }
 
             int min1 = int.MaxValue;
