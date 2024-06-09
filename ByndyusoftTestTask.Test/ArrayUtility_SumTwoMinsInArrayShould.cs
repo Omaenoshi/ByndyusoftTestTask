@@ -36,20 +36,22 @@ namespace ByndyusoftTestTask.Test
         [Test]
         public void SumTwoMinsInArray_InputMillionNumbers_Return1()
         {
-            int[] array = new int[100000000];
-            for (int i = 0; i < array.Length; i++)
+            var array = new int[100000000];
+            for (var i = 0; i < array.Length; i++)
             {
                 array[i] = i;
             }
-            Assert.That(ArrayUtility.SumTwoMinsInArray(array), Is.EqualTo(1));
+
+            var result = ArrayUtility.SumTwoMinsInArray(array);
+            Assert.That(result, Is.EqualTo(1));
         }
 
         [Test]
         public void SumTwoMinsInArray_InputNegatives462_ReturnNegative10()
         {
-            var array = new int[] { -4, -6, -2 };
+            var result = ArrayUtility.SumTwoMinsInArray([-4, -6, -2]);
 
-            Assert.That(ArrayUtility.SumTwoMinsInArray(array), Is.EqualTo(-10));
+            Assert.That(result, Is.EqualTo(-10));
         }
     }
 }
