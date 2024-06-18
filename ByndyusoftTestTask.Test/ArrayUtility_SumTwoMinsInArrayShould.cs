@@ -53,5 +53,11 @@ namespace ByndyusoftTestTask.Test
 
             Assert.That(result, Is.EqualTo(-10));
         }
+
+        [Test]
+        public void SumTwoMinsInArray_InputTwoIntMaxValues_ReturnOverflowException()
+        {
+            Assert.Throws<OverflowException>(() => ArrayUtility.SumTwoMinsInArray([int.MaxValue, int.MaxValue]));
+        }
     }
 }

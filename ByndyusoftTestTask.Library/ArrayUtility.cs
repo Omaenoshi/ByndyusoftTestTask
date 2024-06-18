@@ -25,7 +25,14 @@
                 }
             }
 
-            return min1 + min2;
+            try
+            {
+                return checked(min1 + min2);
+            }
+            catch (OverflowException)
+            {
+                throw new OverflowException("Sum of two minimum elements results in an overflow");
+            }
         }
     }
 }
